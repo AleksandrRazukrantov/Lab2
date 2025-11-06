@@ -5,16 +5,20 @@ public class Main {
     public static void main(String[] args) {
 
        int P0 = in.nextInt();
-       double g = in.nextDouble();
-       int m = in.nextInt();
-       int Cap = in.nextInt();
-       int k = 0;
+        double g = in.nextDouble();
+        int m = in.nextInt();
+        int Cap = in.nextInt();
+        int n = 0;
 
-       while (P0 < Cap){
-           P0 = P0 + ((int)(P0 * g / 100));
-           P0 += m;
-           k++;
-       }
-       System.out.println(k);
+        if(((int)(P0 * g / 100)) + m < 0){
+            System.out.println("Население микрарайона постоянно уменьшаеться");
+        }
+        else{
+            while (P0 < Cap){
+                P0 = P0 + ((int)(P0 * g / 100)) + m;
+                n++;
+            }
+            System.out.println(n);
+        }
     }
 }
