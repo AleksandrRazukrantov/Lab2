@@ -145,7 +145,17 @@ public class Main {
 
 ### d) Программа 2
 
-```import java.util.Scanner;
+```
+import java.util.Scanner;
+public class Main {
+    public static Scanner in = new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+       int n1 = in.nextInt();
+       System.out.println(((int)Math.pow(3,n1) - 1)/2);
+    }
+}
 
 ```
 
@@ -153,17 +163,27 @@ public class Main {
 
 Программа работает корректно на всем множестве решений с учетом ограничений.
 
-1. Тест на `X < A < B < C`:
+1. Тест на N = 2:
 
     - **Input**:
         ```
-        5 6 7 8
+        2
         ```
 
     - **Output**:
         ```
+        4
+        ```
+2. Тест на N = 10:
 
-        0
+    - **Input**:
+        ```
+        10
+        ```
+
+    - **Output**:
+        ```
+        29524
         ```
 ### 3. Задание 3
 - [Постановка задачи 3](#a-постановка-задачи-3)
