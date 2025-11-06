@@ -199,7 +199,7 @@ public class Main {
 
 #### Данные на вход
 
-Р0, g и Cap - натуральные числа, m - целое(так как миграция может быть отрицаткльной)
+Р0, g(от 0 до 100) и Cap - натуральные числа, m - целое(так как миграция может быть отрицаткльной)
 
 #### Данные на выход
 
@@ -223,25 +223,64 @@ public class Main {
 
 ### d) Программа 3
 
-```import java.util.Scanner;
+```
+import java.util.Scanner;
+public class Main {
+    public static Scanner in = new Scanner(System.in);
 
+    public static void main(String[] args) {
+
+       int P0 = in.nextInt();
+        double g = in.nextDouble();
+        int m = in.nextInt();
+        int Cap = in.nextInt();
+        int n = 0;
+
+        if(((int)(P0 * g / 100)) + m < 0){
+            System.out.println("Население микрарайона постоянно уменьшаеться");
+        }
+        else{
+            while (P0 < Cap){
+                P0 = P0 + ((int)(P0 * g / 100)) + m;
+                n++;
+            }
+            System.out.println(n);
+        }
+    }
+}
 ```
 
 ### e) Анализ правильности решения 3
 
 Программа работает корректно на всем множестве решений с учетом ограничений.
 
-1. Тест на `X < A < B < C`:
+1. Тест на Р0 = 100, g = 100, m = 0, Cap = 1000:
 
     - **Input**:
         ```
-        5 6 7 8
+        100
+        100
+        0
+        1000
         ```
 
     - **Output**:
         ```
+        4
+        ```
+2. Тест на Р0 = 100, g = 10, m = -90, Cap = 1000:
 
-        0
+    - **Input**:
+        ```
+        100
+        10
+        -90
+        1000
+        ```
+
+    - **Output**:
+        ```
+        Население микрарайона постоянно уменьшаеться
         ```
 ### 4. Задание 4
 - [Постановка задачи 4](#a-постановка-задачи-4)
