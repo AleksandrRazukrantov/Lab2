@@ -4,7 +4,11 @@ public class Main {
 
     public static void main(String[] args) {
 
-       int n1 = in.nextInt();
-       System.out.println(((int)Math.pow(3,n1) - 1)/2);
+        int N = in.nextInt();
+        int s = 0;
+        for(int i = 0; i < N; i++){
+            s = s*3 + 1;
+        }
+        System.out.println(s);
     }
 }
