@@ -11,7 +11,7 @@ public class Main {
         int n = 0;
 
         if(((int)(P0 * g / 100)) + m < 0){
-            System.out.println("Население микрарайона постоянно уменьшаеться");
+            System.out.println("Население микрарайона постоянно уменьшается");
         }
         else{
             while (P0 < Cap){
